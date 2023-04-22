@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "519839574672",
+    "project_id": "agrosight-cc681",
+    "storage_bucket": "agrosight-cc681.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519839574672:android:4d397127a81cbe98708615",
+        "android_client_info": {
+          "package_name": "com.example.agrimate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519839574672-k26f81h6holifq02kbkkq5gq5dg5bluo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9Iaf5MV5ITMZrYARjp5S5-awYomtXofg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519839574672-k26f81h6holifq02kbkkq5gq5dg5bluo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
