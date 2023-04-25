@@ -6,13 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="380dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="450dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="276dp"
+                android:layout_height="72dp"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="20dp"
+                android:paddingTop="30dp"
+                android:text="Government Schemes"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="179dp"
+                android:layout_height="189dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="70dp"
+                app:srcCompat="@drawable/schemelogo" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/government_schemes"
+                android:onClick="scheme"
+                android:text="Show All"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="184dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp"
+                android:text="सरकारी योजना"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

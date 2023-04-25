@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <Button
+        android:id="@+id/button2"
+        android:onClick="first"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:background="@drawable/scheme_section"
+        android:text="पंतप्रधान किसान सम्मान निधी योजना"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/scheme_section"
+        android:text="प्रधानमंत्री फसल विमा योजना"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/scheme_section"
+        android:text="प्रधानमंत्री कृषी सिंचाई योजना"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/scheme_section"
+        android:text="मिनी कामधेनू डेअरी योजना"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/scheme_section"
+        android:text="जैविक खेती के लिए अर्थिक मदत"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.697" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/scheme_section"
+        android:text="किसान क्रेडिट कार्ड"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:background="@drawable/scheme_section"
+        android:text="राष्ट्रीय खाद्य सुरक्षा मिशन"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/scheme_section"
+        android:text="फसल बीमा का दावा के नियम"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
