@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         Intent intent = new Intent(this,MainActivity2.class);
         startActivity(intent);
+        // Comment
     }
 }
 
