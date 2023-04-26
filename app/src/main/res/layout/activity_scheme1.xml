@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MainActivity3">
+    tools:context=".Scheme1">
 
     <WebView
-        android:id="@+id/webview"
+        android:id="@+id/webview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>

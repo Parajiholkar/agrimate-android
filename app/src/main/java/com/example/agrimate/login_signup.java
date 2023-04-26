@@ -3,7 +3,9 @@ package com.example.agrimate;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.ButtonBarLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -12,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class login_signup extends AppCompatActivity {
 
     public static String PREF_NAME = "MyPrefFile";
+    Button signup_btn;
 
     EditText loginUserEmail, loginUserPassword;
     Button login_btn;
@@ -19,7 +22,7 @@ public class login_signup extends AppCompatActivity {
     public static String PREFS_NAME = "MyPrefsFile";
 
     EditText signUpemail, signUpPhone, signUpUserPassword, signUpUser_confPassword;
-    Button signup_btn;
+
 
     FirebaseAuth mAuth;
     FirebaseAuth mAuth1;
@@ -42,4 +45,10 @@ public class login_signup extends AppCompatActivity {
         signUpUser_confPassword = findViewById(R.id.signUpUser_confPassword);
         signup_btn = findViewById(R.id.signup_btn);
     }
+    public void nxt(View v){
+        signup_btn = findViewById(R.id.signup_btn);
+        Intent intent = new Intent(this , MainActivity.class);
+        startActivity(intent);
+    }
+
 }
