@@ -29,11 +29,11 @@
                     android:textStyle="bold"/>
                 <ImageView
                     android:id="@+id/TD_img"
-                    android:layout_width="380dp"
+                    android:layout_width="350dp"
                     android:layout_height="200dp"
                     android:layout_margin="5dp"
-                    android:contentDescription="trendingDiseases"
-                    android:background="@drawable/leaffff"/>
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="trendingDiseases"/>
                 <TextView
                     android:id="@+id/TD_discription"
                     android:layout_width="match_parent"
