@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject object = response.getJSONObject("main");
                     Double temperature1 = object.getDouble("temp") -273.15;
                     int humi = object.getInt("humidity");
-                    JSONObject jsonObjectWind = object.getJSONObject("wind");
-                    String wi = jsonObjectWind.getString("speed");
+//                    JSONObject jsonObjectWind = object.getJSONObject("wind");
+//                    String wi = jsonObjectWind.getString("speed");
 //                    JSONObject jsonObjectCloud = object.getJSONObject("clouds");
 //                    String clo = jsonObjectCloud.getString("all");
                     toutput += df.format(temperature1) + " C";

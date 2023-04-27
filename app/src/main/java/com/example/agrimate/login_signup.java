@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.ButtonBarLayout;
 
 import android.content.Intent;
-<<<<<<< HEAD
+
 import android.os.Bundle;
-=======
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
->>>>>>> d32eb95b0fa9f0a9284d67510f77fc4a681cd071
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,15 +39,12 @@ public class login_signup extends AppCompatActivity {
 
     public static String PREFS_NAME = "MyPrefsFile";
 
-<<<<<<< HEAD
-    EditText signUpemail, signUpPhone, signUpUserPassword, signUpUser_confPassword;
 
-=======
-    EditText signUpName, signUpemail, signUpPhone, signUpUserPassword;
-    Button signup_btn;
+    EditText signUpemail,signUpName, signUpPhone, signUpUserPassword, signUpUser_confPassword;
+
     TextView alreadyHave_acc, loginTxt;
     TextView dont_have_acc, register_acc;
->>>>>>> d32eb95b0fa9f0a9284d67510f77fc4a681cd071
+
 
     FirebaseAuth mAuth;
     FirebaseAuth mAuth1;
@@ -303,10 +300,10 @@ public class login_signup extends AppCompatActivity {
 //        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
-    public void nxt(View v){
-        signup_btn = findViewById(R.id.signup_btn);
-        Intent intent = new Intent(this , MainActivity.class);
-        startActivity(intent);
-    }
+//    public void nxt(View v){
+//        signup_btn = findViewById(R.id.signup_btn);
+//        Intent intent = new Intent(this , MainActivity.class);
+//        startActivity(intent);
+//    }
 
 }
