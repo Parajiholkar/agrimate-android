@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         // Comment
     }
-
     public void getLocation(){
 
         if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
@@ -123,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
 //                String woutput = "";
                 String houtput = "";
 //                String coutput = "";
-
                 try {
                     JSONObject object = response.getJSONObject("main");
                     Double temperature1 = object.getDouble("temp") -273.15;
