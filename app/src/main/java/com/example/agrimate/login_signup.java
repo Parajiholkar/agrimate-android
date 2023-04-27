@@ -293,11 +293,4 @@ public class login_signup extends AppCompatActivity {
 //        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
-
-
-    public void send(View view) {
-        Intent i = new Intent(login_signup.this, MainActivity.class);
-//        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
-    }
 }
