@@ -14,18 +14,35 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
+    TextView tempera;
+    TextView wind;
+    TextView temp;
+    TextView humidity;
+    TextView clouds;
+    DecimalFormat df = new DecimalFormat("#.##");
     public static final int REQUEST_CODE = 100 ;
     FusedLocationProviderClient fusedLocationProviderClient ;
     private Button button;
@@ -91,5 +108,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void get(View view) {
+        String apiKey = "c9cd744e5b3bf062bcb1d4ac436d8cce";
+        String city = "delhi";
+        String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=090b19c16593a3bf6b3e993e3e171874";
+
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                String toutput = "";
+                String woutput = "";
+                String houtput = "";
+                String coutput = "";
+
+                try {
+                    JSONObject object = response.getJSONObject("main");
+                    Double temperature1 = object.getDouble("temp") -273.15;
+                    int humi = object.getInt("humidity");
+                    JSONObject jsonObjectWind = object.getJSONObject("wind");
+                    String wi = jsonObjectWind.getString("speed");
+//                    JSONObject jsonObjectCloud = object.getJSONObject("clouds");
+//                    String clo = jsonObjectCloud.getString("all");
+                    toutput += df.format(temperature1) + " C";
+                    temp.setText(toutput);
+//                    woutput += wi + "m/s (meters per sec)";
+                    houtput += humi + "%";
+//                    coutput += clo + "%";
+                    humidity.setText(houtput);
+//                    wind.setText(woutput);
+//                    clouds.setText(coutput);
+
+//
+                } catch (JSONException e) {
+                    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+        queue.add(request);
+    }
 }
 
