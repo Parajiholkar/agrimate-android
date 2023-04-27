@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // comment
+        temp = findViewById(R.id.temp);
+        humidity = findViewById(R.id.humidity);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
     }
 
