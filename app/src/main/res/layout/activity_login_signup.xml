@@ -248,6 +248,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_bhai"
         android:text="Login"
+        android:onClick="send"
         android:textColor="#FFC107"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/alreadyHave_acc"
