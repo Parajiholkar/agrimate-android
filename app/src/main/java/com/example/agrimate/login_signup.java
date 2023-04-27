@@ -125,6 +125,10 @@ public class login_signup extends AppCompatActivity {
             public void onClick(View v) {
                 login_layout.setVisibility(View.GONE);
                 sigunp_layout.setVisibility(View.VISIBLE);
+                alreadyHave_acc.setVisibility(View.VISIBLE);
+                dont_have_acc.setVisibility(View.GONE);
+                register_acc.setVisibility(View.GONE);
+                loginTxt.setVisibility(View.VISIBLE);
             }
         });
 
@@ -133,7 +137,10 @@ public class login_signup extends AppCompatActivity {
             public void onClick(View v) {
                 login_layout.setVisibility(View.GONE);
                 sigunp_layout.setVisibility(View.VISIBLE);
-
+                dont_have_acc.setVisibility(View.VISIBLE);
+                alreadyHave_acc.setVisibility(View.GONE);
+                register_acc.setVisibility(View.VISIBLE);
+                loginTxt.setVisibility(View.GONE);
             }
         });
     }
@@ -290,7 +297,7 @@ public class login_signup extends AppCompatActivity {
 
     private void sendUserToNextActivity() {
         Intent i = new Intent(login_signup.this, MainActivity.class);
-//        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
 }
