@@ -5,13 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.ButtonBarLayout;
 
 import android.content.Intent;
-
-import android.os.Bundle;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +27,6 @@ import org.w3c.dom.Text;
 public class login_signup extends AppCompatActivity {
 
     public static String PREF_NAME = "MyPrefFile";
-    Button signup_btn;
 
     LinearLayout sigunp_layout, login_layout;
     EditText loginUserEmail, loginUserPassword;
@@ -39,12 +34,10 @@ public class login_signup extends AppCompatActivity {
 
     public static String PREFS_NAME = "MyPrefsFile";
 
-
-    EditText signUpemail,signUpName, signUpPhone, signUpUserPassword, signUpUser_confPassword;
-
+    EditText signUpName, signUpemail, signUpPhone, signUpUserPassword;
+    Button signup_btn;
     TextView alreadyHave_acc, loginTxt;
     TextView dont_have_acc, register_acc;
-
 
     FirebaseAuth mAuth;
     FirebaseAuth mAuth1;
@@ -300,10 +293,4 @@ public class login_signup extends AppCompatActivity {
 //        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
-//    public void nxt(View v){
-//        signup_btn = findViewById(R.id.signup_btn);
-//        Intent intent = new Intent(this , MainActivity.class);
-//        startActivity(intent);
-//    }
-
 }
