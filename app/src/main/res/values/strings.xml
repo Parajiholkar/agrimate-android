@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Agrimate</string>
+    <string name="Trendingdisease">Trending Disease</string>
+    <string name="TrendingdiseaseHindi">प्रचलित रोग</string>
 </resources>
