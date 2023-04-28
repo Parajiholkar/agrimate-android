@@ -24,6 +24,46 @@
             android:exported="false"
             android:label="Government Schemes"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
+        <activity
+            android:name=".Scheme1"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
+        <activity
+            android:name=".Scheme2"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
+        <activity
+            android:name=".Scheme3"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
+        <activity
+            android:name=".Scheme4"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
+        <activity
+            android:name=".Scheme5"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
+        <activity
+            android:name=".Scheme6"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
+        <activity
+            android:name=".Scheme7"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" />
+
 
         <activity
             android:name=".login_signup"
