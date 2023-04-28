@@ -201,7 +201,6 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="179dp"
