@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MainActivity.this);
 
 
 
@@ -187,6 +186,8 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(new trending_Disease_model(TD7_title,TD7_discription,R.drawable.img));
         Adapter adapter = new Adapter(this,arrayList);
         recyclerView.setAdapter(adapter);
+
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MainActivity.this);
 
         getLocation();
         get();
