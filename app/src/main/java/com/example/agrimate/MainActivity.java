@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // comment
+        clouds = findViewById(R.id.clouds);
+        wind = findViewById(R.id.wind);
         temp = findViewById(R.id.temp);
         humidity = findViewById(R.id.humidity);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -119,25 +121,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 String toutput = "";
-//                String woutput = "";
+                String woutput = "";
                 String houtput = "";
-//                String coutput = "";
+                String coutput = "";
                 try {
                     JSONObject object = response.getJSONObject("main");
                     Double temperature1 = object.getDouble("temp") -273.15;
                     int humi = object.getInt("humidity");
-//                    JSONObject jsonObjectWind = object.getJSONObject("wind");
-//                    String wi = jsonObjectWind.getString("speed");
-//                    JSONObject jsonObjectCloud = object.getJSONObject("clouds");
-//                    String clo = jsonObjectCloud.getString("all");
+                    JSONObject jsonObjectWind = response.getJSONObject("wind");
+                    String wi = jsonObjectWind.getString("speed");
+                    JSONObject jsonObjectCloud = response.getJSONObject("clouds");
+                    String clo = jsonObjectCloud.getString("all");
                     toutput += df.format(temperature1) + " C";
                     temp.setText(toutput);
-//                    woutput += wi + "m/s (meters per sec)";
+                    woutput += wi + "m/s";
                     houtput += humi + "%";
-//                    coutput += clo + "%";
+                    coutput += clo + "%";
                     humidity.setText(houtput);
-//                    wind.setText(woutput);
-//                    clouds.setText(coutput);
+                    wind.setText(woutput);
+                    clouds.setText(coutput);
 
 //
                 } catch (JSONException e) {
