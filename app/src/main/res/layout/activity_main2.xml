@@ -9,9 +9,10 @@
 
     <Button
         android:id="@+id/button2"
-        android:onClick="first"
         android:layout_width="370dp"
         android:layout_height="70dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:background="@drawable/scheme_section"
         android:text="राष्ट्रीय कृषि विकास योजना (RKVY)"
         android:textColor="@color/white"
@@ -25,13 +26,14 @@
 
     <Button
         android:id="@+id/button3"
-        android:onClick="second"
         android:layout_width="370dp"
         android:layout_height="70dp"
-        android:textSize="24dp"
-        android:textColor="@color/white"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:background="@drawable/scheme_section"
-        android:text="प्रधानमंत्री फसल बीमा योजना"
+        android:text="प्रधानमंत्री फसल विमा योजना"
+        android:textColor="@color/white"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
@@ -41,7 +43,6 @@
 
     <Button
         android:id="@+id/button4"
-        android:onClick="third"
         android:layout_width="370dp"
         android:layout_height="70dp"
         android:textSize="24dp"
@@ -57,7 +58,6 @@
 
     <Button
         android:id="@+id/button5"
-        android:onClick="fourth"
         android:layout_width="370dp"
         android:layout_height="70dp"
         android:textSize="24dp"
@@ -73,7 +73,6 @@
 
     <Button
         android:id="@+id/button6"
-        android:onClick="fifth"
         android:layout_width="370dp"
         android:layout_height="70dp"
         android:textSize="24dp"
@@ -89,7 +88,6 @@
 
     <Button
         android:id="@+id/button7"
-        android:onClick="sixth"
         android:layout_width="370dp"
         android:layout_height="70dp"
         android:textSize="24dp"
@@ -105,7 +103,6 @@
 
     <Button
         android:id="@+id/button8"
-        android:onClick="seventh"
         android:layout_width="370dp"
         android:layout_height="70dp"
         android:background="@drawable/scheme_section"
@@ -121,7 +118,6 @@
 
     <Button
         android:id="@+id/button9"
-        android:onClick="eighth"
         android:layout_width="370dp"
         android:layout_height="70dp"
         android:textSize="24dp"
