@@ -249,14 +249,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
                 android:orientation="vertical"
                 tools:context=".MainActivity_trending_disease">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
                     android:text="Trending Disease"
                     android:textSize="28sp"
                     android:textStyle="bold"/>
@@ -265,7 +265,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/recycler_disease"
-                    android:layout_margin="5dp">
+                    android:layout_margin="15dp">
 
                 </androidx.recyclerview.widget.RecyclerView>
 
