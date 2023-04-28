@@ -39,11 +39,6 @@
             android:label="Government Schemes"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".MainActivity_trending_disease"
-            android:exported="false"
-            android:label="Government Schemes"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".Scheme3"
             android:exported="false"
             android:label="Government Schemes"
@@ -78,6 +73,8 @@
             android:exported="false"
             android:label="Government Schemes"
             android:parentActivityName=".MainActivity" />
+
+
         <activity
             android:name=".login_signup"
             android:exported="true"
@@ -86,11 +83,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
