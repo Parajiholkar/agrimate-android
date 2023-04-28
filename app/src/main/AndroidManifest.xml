@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -32,15 +34,59 @@
             android:label="Government Schemes"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".MainActivity3"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity_trending_disease"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Scheme3"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Scheme4"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Scheme6"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Scheme1"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Scheme2"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Scheme5"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Scheme7"
+            android:exported="false"
+            android:label="Government Schemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".login_signup"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
-
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="false"
