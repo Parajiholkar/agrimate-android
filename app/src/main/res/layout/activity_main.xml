@@ -374,14 +374,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:layout_margin="20dp"
+=======
+>>>>>>> 01305f0072f6c503d1cb499856f841772438ad03
                 android:orientation="vertical"
                 tools:context=".MainActivity_trending_disease">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
                     android:text="Trending Disease"
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -390,7 +394,12 @@
                     android:id="@+id/recycler_disease"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:layout_margin="5dp">
+=======
+                    android:id="@+id/recycler_disease"
+                    android:layout_margin="15dp">
+>>>>>>> 01305f0072f6c503d1cb499856f841772438ad03
 
                 </androidx.recyclerview.widget.RecyclerView>
 
