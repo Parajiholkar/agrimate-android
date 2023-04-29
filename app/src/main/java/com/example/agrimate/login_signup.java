@@ -79,12 +79,20 @@ public class login_signup extends AppCompatActivity {
                 editor.putBoolean("hasRegistered",true);
                 editor.apply();
                 registerUser();
+                sigunp_layout.setVisibility(View.GONE);
+                login_layout.setVisibility(View.VISIBLE);
+                alreadyHave_acc.setVisibility(View.GONE);
+                dont_have_acc.setVisibility(View.VISIBLE);
+                register_acc.setVisibility(View.VISIBLE);
+                loginTxt.setVisibility(View.GONE);
+
             }
         });
 
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 SharedPreferences sharedPreferences = getSharedPreferences(login_signup.PREF_NAME,0);
                 SharedPreferences.Editor editor = sharedPreferences.edit();

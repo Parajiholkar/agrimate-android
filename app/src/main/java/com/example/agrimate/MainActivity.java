@@ -41,6 +41,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     TextView temp;
     TextView humidity;
     TextView clouds;
+    TextView desc;
     DecimalFormat df = new DecimalFormat("#.##");
     public static final int REQUEST_CODE = 100 ;
     FusedLocationProviderClient fusedLocationProviderClient ;
@@ -76,7 +78,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        clouds = findViewById(R.id.clouds);
+        wind = findViewById(R.id.wind);
+        temp = findViewById(R.id.temp);
+        humidity = findViewById(R.id.humidty);
+        desc = findViewById(R.id.description);
 
 
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -113,11 +119,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // comment
-        clouds = findViewById(R.id.clouds);
-        wind = findViewById(R.id.wind);
-        temp = findViewById(R.id.temp);
-        humidity = findViewById(R.id.humidity);
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MainActivity.this);
 
 
         recyclerView = findViewById(R.id.recycler_disease);
@@ -190,14 +192,16 @@ public class MainActivity extends AppCompatActivity {
         Adapter adapter = new Adapter(this,arrayList);
         recyclerView.setAdapter(adapter);
 
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MainActivity.this);
-
         getLocation();
+
         get();
 
     }
 
     public void getLocation(){
+
+        TextView city_name;
+        city_name = (TextView) findViewById(R.id.city_name);
 
         if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
 
@@ -208,13 +212,18 @@ public class MainActivity extends AppCompatActivity {
                             Geocoder geocoder = new Geocoder(MainActivity.this, Locale.getDefault());
                             try {
                                 List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-                                address = addresses.get(0).getAddressLine(0);
-                                city = addresses.get(0).getLocality();
-                                country = addresses.get(0).getCountryName();
+//                                address = addresses.get(0).getAddressLine(0);
+//                                city = addresses.get(0).getLocality();
+//                                country = addresses.get(0).getCountryName();
+
+
+                                city_name.setText(addresses.get(0).getLocality());
                             } catch (IOException e) {
                                 throw new RuntimeException(e) ;
                             }
                         }
+
+
                     });
         }else {
 
@@ -222,7 +231,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
     private void askPermission() {
         ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
     }
@@ -257,6 +265,9 @@ public class MainActivity extends AppCompatActivity {
                 String coutput = "";
                 try {
                     JSONObject object = response.getJSONObject("main");
+                    JSONArray jsonArray = response.getJSONArray("weather");
+                    JSONObject jsonObjectWeather = jsonArray.getJSONObject(0);
+                    String description = jsonObjectWeather.getString("description");
                     Double temperature1 = object.getDouble("temp") -273.15;
                     int humi = object.getInt("humidity");
                     JSONObject jsonObjectWind = response.getJSONObject("wind");
@@ -271,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
                     humidity.setText(houtput);
                     wind.setText(woutput);
                     clouds.setText(coutput);
-
+                    desc.setText("It's a " + description + " today.");
 //
                 } catch (JSONException e) {
                     Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();

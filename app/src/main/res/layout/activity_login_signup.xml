@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/biryani_bold"
-        android:text="AgroSight"
+        android:text="AgriMate"
         android:textColor="#C96915"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"

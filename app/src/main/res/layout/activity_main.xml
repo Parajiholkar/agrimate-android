@@ -4,18 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A9B05"
+    android:background="#0F4A59"
+    android:padding="8dp"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Its a clear sky today."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@+id/userName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/baloo_bhai"
+        android:text="Hi, Shubham"
         android:textColor="#FBFBFB"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +40,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
 
         android:background="@drawable/scrollview_bg"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,218 +55,326 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout android:id="@+id/detailsContainer"
-                android:layout_marginTop="30dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/detailsContainer"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="35dp">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:background="#3CF1EBF1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <Space
-                            android:layout_width="wrap_content"
-                            android:layout_height="5dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingStart="30dp"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:id="@+id/air_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal"
+                                app:flow_horizontalAlign="center">
+
+                                <ImageView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:background="@drawable/drawable_air"
+                                    android:padding="10dp"
+                                    android:textAlignment="center"
+                                    android:tint="#FFFDFD"
+                                    app:srcCompat="@drawable/baseline_air_24" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/wind"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginBottom="1dp"
+                                        android:fontFamily="@font/ubuntu_bold"
+                                        android:text="0.46m/s"
+                                        android:textColor="#000000"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textView6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_marginTop="1dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:text="Wind"
+                                        android:textColor="#242121" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="30dp"
+                                android:orientation="horizontal"
+                                app:flow_horizontalAlign="center">
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:background="@drawable/weather_img_bg"
+                                    android:padding="10dp"
+                                    android:textAlignment="center"
+                                    android:tint="#FFFDFD"
+                                    app:srcCompat="@drawable/baseline_device_thermostat_24" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/temp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginBottom="1dp"
+                                        android:fontFamily="@font/ubuntu_bold"
+                                        android:text="31°C"
+                                        android:textColor="#000000"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textView5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:layout_marginTop="1dp"
+                                        android:fontFamily="sans-serif-light"
+                                        android:text="Temp"
+                                        android:textColor="#242121" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Temperature"
-                            android:textColor="#171616"
-                            android:textSize="20sp" />
+                            android:layout_marginStart="30dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                            app:layout_constraintStart_toStartOf="parent">
 
-                        <TextView
-                            android:id="@+id/temp"
-                            android:layout_width="wrap_content"
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rainfall_bg"
+                                android:padding="10dp"
+                                android:tint="#FFFFFF"
+                                app:srcCompat="@drawable/baseline_water_drop_24" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/humidty"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/ubuntu_bold"
+                                    android:text="38%"
+                                    android:textColor="#000000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="Humidity"
+                                    android:textColor="#242121" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="06:40 AM"
-                            android:textSize="22sp" />
-                    </LinearLayout>
+                            android:layout_marginStart="1dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout3">
 
-                    <Space
-                        android:layout_width="5dp"
-                        android:layout_height="wrap_content" />
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/humidity_bg"
+                                android:padding="10dp"
+                                android:tint="#FFFEFE"
+                                app:srcCompat="@drawable/baseline_wb_cloudy_24" />
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="193dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:background="#3CF1EBF1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                                <TextView
+                                    android:id="@+id/clouds"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:fontFamily="@font/ubuntu_bold"
+                                    android:text="6%"
+                                    android:textColor="#000000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
 
-                        <Space
-                            android:layout_width="wrap_content"
-                            android:layout_height="5dp" />
+                                <TextView
+                                    android:id="@+id/textView12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="Clouds"
+                                    android:textColor="#242121" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Wind"
-                            android:textColor="#100F0F"
-                            android:textSize="20dp" />
 
-                        <TextView
-                            android:id="@+id/wind"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="06:40 AM"
-                            android:textSize="22sp" />
-                    </LinearLayout>
                 </LinearLayout>
-
-                <Space android:layout_width="wrap_content" android:layout_height="10dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="128dp">
-
-                    <LinearLayout
-                        android:layout_width="206dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="#3CF1EBF1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-
-                        <Space
-                            android:layout_width="wrap_content"
-                            android:layout_height="5dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Clouds"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/clouds"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="06:40 AM"
-                            android:textSize="22sp" />
-                    </LinearLayout>
-
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content" />
-
-                    <LinearLayout
-                        android:layout_width="188dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="#3CF1EBF1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-
-                        <Space
-                            android:layout_width="wrap_content"
-                            android:layout_height="5dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Humidity"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/humidity"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="06:40 AM"
-                            android:textSize="22sp" />
-                    </LinearLayout>
-
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="380dp"
-                android:layout_height="250dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp"
-                app:cardUseCompatPadding="true"
-
-                >
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="276dp"
-                    android:layout_height="72dp"
-                    android:fontFamily="sans-serif-black"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="30dp"
-                    android:text="Government Schemes"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="179dp"
-                    android:layout_height="189dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="70dp"
-                    app:srcCompat="@drawable/schemelogo" />
 
                 <Button
-                    android:id="@+id/button"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_marginTop="170dp"
-                    android:background="@drawable/government_schemes"
-                    android:text="Show All"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:id="@+id/button10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="31dp"
+                    android:background="#09BB59"
+                    android:paddingEnd="20dp"
+                    android:text="Diagnosis issue with crop "
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detailsContainer" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="184dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="70dp"
-                    android:text="सरकारी योजना"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button10">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:paddingLeft="20dp"
+                        android:text="Government Schemes"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="179dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="50dp"
+                        app:srcCompat="@drawable/schemelogo" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/government_schemes"
+                        android:text="Show All"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="184dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="40dp"
+                        android:text="सरकारी योजना"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
+                android:layout_margin="20dp"
                 android:orientation="vertical"
                 tools:context=".MainActivity_trending_disease">
 
@@ -259,12 +384,12 @@
                     android:layout_margin="10dp"
                     android:text="Trending Disease"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_disease"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/recycler_disease"
                     android:layout_margin="5dp">
 
                 </androidx.recyclerview.widget.RecyclerView>
@@ -273,6 +398,29 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/city_bg"
+        android:drawableStart="@drawable/baseline_my_location_24"
+        android:fontFamily="@font/baloo_bhai"
+        android:paddingStart="5dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:text="Pune"
+        android:textColor="#E8E8E8"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/userName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.405" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
